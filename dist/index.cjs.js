@@ -4064,11 +4064,11 @@ var socials = [
         icon: "TwitterIcon",
         href: "https://twitter.com/UnitedFarmersF",
     },
-    {
-        label: "Reddit",
-        icon: "RedditIcon",
-        href: "https://www.reddit.com/r/unitedfarmersfinance",
-    }
+    // {
+    //   label: "Reddit",
+    //   icon: "RedditIcon",
+    //   href: "https://www.reddit.com/r/unitedfarmersfinance",
+    // }
 ];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;

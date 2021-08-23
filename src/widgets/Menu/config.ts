@@ -150,11 +150,11 @@ export const socials = [
     icon: "TwitterIcon",
     href: "https://twitter.com/UnitedFarmersF",
   },
-  {
-    label: "Reddit",
-    icon: "RedditIcon",
-    href: "https://www.reddit.com/r/unitedfarmersfinance",
-  }
+  // {
+  //   label: "Reddit",
+  //   icon: "RedditIcon",
+  //   href: "https://www.reddit.com/r/unitedfarmersfinance",
+  // }
 ];
 
 export const MENU_HEIGHT = 64;

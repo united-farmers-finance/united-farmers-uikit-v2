@@ -2346,7 +2346,7 @@ var RotatingPancakeIcon = styled(Icon$h)(templateObject_4$4 || (templateObject_4
 var Spinner = function (_a) {
     var _b = _a.size, size = _b === void 0 ? 128 : _b;
     return (React.createElement(Container$3, null,
-        React.createElement(RotatingPancakeIcon, { width: size * 0.5 + "px" })));
+        React.createElement(RotatingPancakeIcon, { width: size * 1 + "px" })));
 };
 var templateObject_1$u, templateObject_2$g, templateObject_3$8, templateObject_4$4;
 

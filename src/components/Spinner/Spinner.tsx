@@ -39,7 +39,7 @@ const RotatingPancakeIcon = styled(PancakeIcon)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <RotatingPancakeIcon width={`${size * 0.5}px`} />
+      <RotatingPancakeIcon width={`${size * 1}px`} />
     </Container>
   );
 };

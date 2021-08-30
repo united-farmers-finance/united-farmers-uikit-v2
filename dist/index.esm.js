@@ -4676,9 +4676,7 @@ var ConnectModal = function (_a) {
                     displayListConfig.map(function (wallet) { return (React.createElement(Box, { key: wallet.title },
                         React.createElement(WalletCard, { walletConfig: wallet, login: login, onDismiss: onDismiss }))); }),
                     !showMore && React.createElement(MoreWalletCard, { onClick: function () { return setShowMore(true); } }))),
-            React.createElement(Box, { p: "24px" },
-                React.createElement(Text, { textAlign: "center", color: "textSubtle", as: "p", mb: "16px" }, "Haven't got a crypto wallet yet?"),
-                React.createElement(Button, __assign({ as: "a", href: "https://docs.pancakeswap.finance/get-started/connection-guide", variant: "subtle", width: "100%" }, getExternalLinkProps()), "Learn How to Connect")))));
+            React.createElement(Box, { p: "24px" }))));
 };
 var templateObject_1$2;
 

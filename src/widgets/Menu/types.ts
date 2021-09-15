@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { HTMLAttributeAnchorTarget, ReactElement } from "react";
 import { Colors } from "../../theme/types";
 
 export interface Language {

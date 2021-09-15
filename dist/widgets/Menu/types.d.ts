@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { HTMLAttributeAnchorTarget, ReactElement } from "react";
 import { Colors } from "../../theme/types";
 export interface Language {
     code: string;
@@ -17,6 +17,7 @@ export interface LinkStatus {
     color: keyof Colors;
 }
 export interface MenuSubEntry {
+    target: HTMLAttributeAnchorTarget | undefined;
     label: string;
     href: string;
     calloutClass?: string;

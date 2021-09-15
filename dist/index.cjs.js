@@ -4158,12 +4158,17 @@ var Accordion = function (_a) {
 var templateObject_1$e, templateObject_2$6;
 
 var MenuLink = function (_a) {
-    var href = _a.href, otherProps = __rest(_a, ["href"]);
+    var href = _a.href, target = _a.target, otherProps = __rest(_a, ["href", "target"]);
     var isHttpLink = href === null || href === void 0 ? void 0 : href.startsWith("http");
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     var Tag = isHttpLink ? "a" : reactRouterDom.NavLink;
     var props = isHttpLink ? { href: href } : { to: href };
-    return React__default['default'].createElement(Tag, __assign({ role: "button" }, props, otherProps));
+    if (target) {
+        return React__default['default'].createElement(Tag, __assign({ role: "button", target: target }, props, otherProps));
+    }
+    else {
+        return React__default['default'].createElement(Tag, __assign({ role: "button" }, props, otherProps));
+    }
 };
 
 var Icons$1 = IconModule;
@@ -4176,15 +4181,19 @@ var PanelBody = function (_a) {
     return (React__default['default'].createElement(Container$1, null, links.map(function (entry) {
         var Icon = Icons$1[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
-        var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        var calloutClass = entry.calloutClass
+            ? entry.calloutClass
+            : undefined;
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
-            var initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
+            var initialOpenState = entry.initialOpenState === true
+                ? entry.initialOpenState
+                : itemsMatchIndex >= 0;
             return (React__default['default'].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, status: entry.status, initialOpenState: initialOpenState, className: calloutClass, isActive: entry.items.some(function (item) { return item.href === location.pathname; }) }, isPushed &&
                 entry.items.map(function (item) { return (React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
-                    React__default['default'].createElement(MenuLink, { href: item.href },
+                    React__default['default'].createElement(MenuLink, { href: item.href, target: item.target },
                         React__default['default'].createElement(LinkLabelMemo, { isPushed: isPushed }, item.label),
-                        item.status && (React__default['default'].createElement(LinkStatus, { color: item.status.color, fontSize: "14px" }, item.status.text))))); })));
+                        item.status && (React__default['default'].createElement(LinkStatus, { color: item.status.color, fontSize: "24px" }, item.status.text))))); })));
         }
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
             React__default['default'].createElement(MenuLink, { href: entry.href, onClick: handleClick },

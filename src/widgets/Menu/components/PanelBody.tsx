@@ -33,11 +33,18 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
-        const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        const calloutClass = entry.calloutClass
+          ? entry.calloutClass
+          : undefined;
 
         if (entry.items) {
-          const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);
-          const initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
+          const itemsMatchIndex = entry.items.findIndex(
+            (item) => item.href === location.pathname
+          );
+          const initialOpenState =
+            entry.initialOpenState === true
+              ? entry.initialOpenState
+              : itemsMatchIndex >= 0;
 
           return (
             <Accordion
@@ -49,12 +56,19 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               status={entry.status}
               initialOpenState={initialOpenState}
               className={calloutClass}
-              isActive={entry.items.some((item) => item.href === location.pathname)}
+              isActive={entry.items.some(
+                (item) => item.href === location.pathname
+              )}
             >
               {isPushed &&
                 entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <MenuLink href={item.href}>
+                  <MenuEntry
+                    key={item.href}
+                    secondary
+                    isActive={item.href === location.pathname}
+                    onClick={handleClick}
+                  >
+                    <MenuLink href={item.href} target={item.target}>
                       <LinkLabel isPushed={isPushed}>{item.label}</LinkLabel>
                       {item.status && (
                         <LinkStatus color={item.status.color} fontSize="14px">
@@ -68,7 +82,11 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           );
         }
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+          <MenuEntry
+            key={entry.label}
+            isActive={entry.href === location.pathname}
+            className={calloutClass}
+          >
             <MenuLink href={entry.href} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>

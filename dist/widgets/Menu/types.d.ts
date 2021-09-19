@@ -17,7 +17,7 @@ export interface LinkStatus {
     color: keyof Colors;
 }
 export interface MenuSubEntry {
-    target: HTMLAttributeAnchorTarget | undefined;
+    target?: HTMLAttributeAnchorTarget | undefined;
     label: string;
     href: string;
     calloutClass?: string;

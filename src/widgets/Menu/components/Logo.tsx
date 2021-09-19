@@ -3,7 +3,11 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
-import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText } from "../icons";
+import {
+  HamburgerIcon,
+  HamburgerCloseIcon,
+  LogoIcon as LogoWithText,
+} from "../icons";
 import MenuButton from "./MenuButton";
 
 interface Props {
@@ -28,7 +32,7 @@ const StyledLink = styled(Link)`
     }
   }
   .desktop-icon {
-    width: 300px;
+    width: 800px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -79,4 +83,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   );
 };
 
-export default React.memo(Logo, (prev, next) => prev.isPushed === next.isPushed && prev.isDark === next.isDark);
+export default React.memo(
+  Logo,
+  (prev, next) => prev.isPushed === next.isPushed && prev.isDark === next.isDark
+);

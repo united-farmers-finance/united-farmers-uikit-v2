@@ -4298,7 +4298,9 @@ var StyledNav = styled__default['default'].nav(templateObject_2$4 || (templateOb
     return theme.nav.background;
 });
 var BodyWrapper = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
+var Inner = styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ",
+    ";\n    max-width: ",
+    ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
 }, function (_a) {
@@ -4326,7 +4328,8 @@ var Menu$1 = function (_a) {
     React.useEffect(function () {
         var handleScroll = function () {
             var currentOffset = window.pageYOffset;
-            var isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+            var isBottomOfPage = window.document.body.clientHeight ===
+                currentOffset + window.innerHeight;
             var isTopOfPage = currentOffset === 0;
             // Always show the menu when user reach the top
             if (isTopOfPage) {
@@ -4358,6 +4361,8 @@ var Menu$1 = function (_a) {
             React__default['default'].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default['default'].createElement(Flex, null,
                 globalMenu,
+                " ",
+                userMenu,
                 " ",
                 userMenu)),
         React__default['default'].createElement(BodyWrapper, null,

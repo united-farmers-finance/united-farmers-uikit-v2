@@ -143,7 +143,7 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://t.me/united_farmers_defi"
+    href: "https://t.me/united_farmers_defi",
   },
   {
     label: "Twitter",
@@ -155,6 +155,14 @@ export const socials = [
   //   icon: "RedditIcon",
   //   href: "https://www.reddit.com/r/unitedfarmersfinance",
   // }
+];
+
+export const telegram = [
+  {
+    label: "Telegram",
+    icon: "TelegramIcon",
+    href: "https://t.me/united_farmers_defi",
+  },
 ];
 
 export const MENU_HEIGHT = 64;

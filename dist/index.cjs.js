@@ -4062,7 +4062,7 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/united_farmers_defi"
+        href: "https://t.me/united_farmers_defi",
     },
     {
         label: "Twitter",
@@ -4217,7 +4217,11 @@ var templateObject_1$c;
 var Icons = IconModule;
 var SocialLinks = function () { return (React__default['default'].createElement(Flex, null, socials.map(function (social, index) {
     var Icon = Icons[social.icon];
-    var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
+    var iconProps = {
+        width: "24px",
+        color: "textSubtle",
+        style: { cursor: "pointer" },
+    };
     var mr = index < socials.length - 1 ? "24px" : 0;
     // if (social.items) {
     //   return (

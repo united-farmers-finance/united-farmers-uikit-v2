@@ -4,20 +4,20 @@ import Flex from "../../../components/Box/Flex";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import Link from "../../../components/Link/Link";
 import * as IconModule from "../icons";
-import { socials } from "../config";
+import { telegram } from "../config";
 
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
-const SocialLinks: React.FC = () => (
+const TelegramLink: React.FC = () => (
   <Flex>
-    {socials.map((social, index) => {
-      const Icon = Icons[social.icon];
+    {telegram.map((telegram, index) => {
+      const Icon = Icons[telegram.icon];
       const iconProps = {
         width: "24px",
         color: "textSubtle",
         style: { cursor: "pointer" },
       };
-      const mr = index < socials.length - 1 ? "24px" : 0;
+      const mr = "24px";
       // if (social.items) {
       //   return (
       //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
@@ -32,9 +32,9 @@ const SocialLinks: React.FC = () => (
       return (
         <Link
           external
-          key={social.label}
-          href={social.href}
-          aria-label={social.label}
+          key={telegram.label}
+          href={telegram.href}
+          aria-label={telegram.label}
           mr={mr}
         >
           <Icon {...iconProps} />
@@ -44,4 +44,4 @@ const SocialLinks: React.FC = () => (
   </Flex>
 );
 
-export default React.memo(SocialLinks, () => true);
+export default React.memo(TelegramLink, () => true);

@@ -13,11 +13,11 @@ const TelegramLink: React.FC = () => (
     {telegram.map((telegram, index) => {
       const Icon = Icons[telegram.icon];
       const iconProps = {
-        width: "24px",
+        width: "32px",
         color: "textSubtle",
         style: { cursor: "pointer" },
       };
-      const mr = "24px";
+      const mr = "15px";
       // if (social.items) {
       //   return (
       //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>

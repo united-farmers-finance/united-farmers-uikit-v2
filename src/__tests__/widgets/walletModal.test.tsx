@@ -380,12 +380,12 @@ it("renders ConnectModal correctly", () => {
           <div
             class="c3 c4"
           >
-              <h2
-                class="c5 c6"
-                color="text"
-              >
-                Connect Wallet(test)
-              </h2> 
+            <h2
+              class="c5 c6"
+              color="text"
+            >
+              Connect Wallet
+            </h2>
           </div>
           <button
             aria-label="Close the dialog"

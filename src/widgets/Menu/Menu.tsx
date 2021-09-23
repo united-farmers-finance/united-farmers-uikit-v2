@@ -12,6 +12,7 @@ import {
   SIDEBAR_WIDTH_REDUCED,
   SIDEBAR_WIDTH_FULL,
 } from "./config";
+import TelegramLink from "./components/TelegramLink";
 
 const Wrapper = styled.div`
   position: relative;
@@ -130,7 +131,7 @@ const Menu: React.FC<NavProps> = ({
         />
         {/* Add testing usermenu */}
         <Flex>
-          {globalMenu} {userMenu} {userMenu}
+          {globalMenu} <TelegramLink /> {userMenu}
         </Flex>
       </StyledNav>
       <BodyWrapper>

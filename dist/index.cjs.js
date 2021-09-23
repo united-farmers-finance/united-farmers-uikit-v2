@@ -1966,7 +1966,7 @@ var variants$3 = {
     },
 };
 
-var Icons$2 = {
+var Icons$3 = {
     warning: Icon$p,
     danger: Icon$1X,
 };
@@ -1976,7 +1976,7 @@ var MessageContainer = styled__default['default'].div(templateObject_1$D || (tem
 }));
 var Message = function (_a) {
     var children = _a.children, variant = _a.variant, icon = _a.icon, props = __rest(_a, ["children", "variant", "icon"]);
-    var Icon = Icons$2[variant];
+    var Icon = Icons$3[variant];
     return (React__default['default'].createElement(MessageContainer, __assign({ variant: variant }, props),
         React__default['default'].createElement(Box, { mr: "12px" }, icon !== null && icon !== void 0 ? icon : React__default['default'].createElement(Icon, { color: variants$3[variant].borderColor, width: "24px" })),
         children));
@@ -4075,6 +4075,13 @@ var socials = [
     //   href: "https://www.reddit.com/r/unitedfarmersfinance",
     // }
 ];
+var telegram = [
+    {
+        label: "Telegram",
+        icon: "TelegramIcon",
+        href: "https://t.me/united_farmers_defi",
+    },
+];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;
 var SIDEBAR_WIDTH_FULL = 240;
@@ -4171,7 +4178,7 @@ var MenuLink = function (_a) {
     }
 };
 
-var Icons$1 = IconModule;
+var Icons$2 = IconModule;
 var Container$1 = styled__default['default'].div(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n"])));
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
@@ -4179,7 +4186,7 @@ var PanelBody = function (_a) {
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
     return (React__default['default'].createElement(Container$1, null, links.map(function (entry) {
-        var Icon = Icons$1[entry.icon];
+        var Icon = Icons$2[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass
             ? entry.calloutClass
@@ -4214,9 +4221,9 @@ var CakePrice = function (_a) {
 var CakePrice$1 = React__default['default'].memo(CakePrice);
 var templateObject_1$c;
 
-var Icons = IconModule;
+var Icons$1 = IconModule;
 var SocialLinks = function () { return (React__default['default'].createElement(Flex, null, socials.map(function (social, index) {
-    var Icon = Icons[social.icon];
+    var Icon = Icons$1[social.icon];
     var iconProps = {
         width: "24px",
         color: "textSubtle",
@@ -4293,6 +4300,31 @@ var Panel = function (props) {
 };
 var templateObject_1$a;
 
+var Icons = IconModule;
+var TelegramLink = function () { return (React__default['default'].createElement(Flex, null, telegram.map(function (telegram, index) {
+    var Icon = Icons[telegram.icon];
+    var iconProps = {
+        width: "32px",
+        color: "textSubtle",
+        style: { cursor: "pointer" },
+    };
+    var mr = "15px";
+    // if (social.items) {
+    //   return (
+    //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
+    //       {social.items.map((item) => (
+    //         <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
+    //           {item.label}
+    //         </Link>
+    //       ))}
+    //     </Dropdown>
+    //   );
+    // }
+    return (React__default['default'].createElement(Link, { external: true, key: telegram.label, href: telegram.href, "aria-label": telegram.label, mr: mr },
+        React__default['default'].createElement(Icon, __assign({}, iconProps))));
+}))); };
+var TelegramLink$1 = React__default['default'].memo(TelegramLink, function () { return true; });
+
 var Wrapper = styled__default['default'].div(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
 var StyledNav = styled__default['default'].nav(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
@@ -4366,7 +4398,7 @@ var Menu$1 = function (_a) {
             React__default['default'].createElement(Flex, null,
                 globalMenu,
                 " ",
-                userMenu,
+                React__default['default'].createElement(TelegramLink$1, null),
                 " ",
                 userMenu)),
         React__default['default'].createElement(BodyWrapper, null,

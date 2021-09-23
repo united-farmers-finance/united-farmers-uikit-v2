@@ -73,12 +73,13 @@ const ConnectModal: React.FC<Props> = ({
     : sortedConfig.slice(0, displayCount);
 
   return (
+    //Inside wallet!!!!!!!!
     <ModalContainer minWidth="320px">
       <ModalHeader
         background={getThemeValue("colors.gradients.bubblegum")(theme)}
       >
         <ModalTitle>
-          <Heading>Connect Wallet(test)</Heading>
+          <Heading>Connect Wallet</Heading>
         </ModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </ModalHeader>

@@ -7,7 +7,13 @@ import getThemeValue from "../../util/getThemeValue";
 import Text from "../../components/Text/Text";
 import Heading from "../../components/Heading/Heading";
 import { Button } from "../../components/Button";
-import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from "../Modal";
+import {
+  ModalBody,
+  ModalCloseButton,
+  ModalContainer,
+  ModalHeader,
+  ModalTitle,
+} from "../Modal";
 import WalletCard, { MoreWalletCard } from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
 import { Config, Login } from "./types";
@@ -30,13 +36,17 @@ const WalletWrapper = styled(Box)`
  */
 const getPreferredConfig = (walletConfig: Config[]) => {
   const preferredWalletName = localStorage.getItem(walletLocalStorageKey);
-  const sortedConfig = walletConfig.sort((a: Config, b: Config) => a.priority - b.priority);
+  const sortedConfig = walletConfig.sort(
+    (a: Config, b: Config) => a.priority - b.priority
+  );
 
   if (!preferredWalletName) {
     return sortedConfig;
   }
 
-  const preferredWallet = sortedConfig.find((sortedWalletConfig) => sortedWalletConfig.title === preferredWalletName);
+  const preferredWallet = sortedConfig.find(
+    (sortedWalletConfig) => sortedWalletConfig.title === preferredWalletName
+  );
 
   if (!preferredWallet) {
     return sortedConfig;
@@ -44,21 +54,31 @@ const getPreferredConfig = (walletConfig: Config[]) => {
 
   return [
     preferredWallet,
-    ...sortedConfig.filter((sortedWalletConfig) => sortedWalletConfig.title !== preferredWalletName),
+    ...sortedConfig.filter(
+      (sortedWalletConfig) => sortedWalletConfig.title !== preferredWalletName
+    ),
   ];
 };
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 3 }) => {
+const ConnectModal: React.FC<Props> = ({
+  login,
+  onDismiss = () => null,
+  displayCount = 3,
+}) => {
   const [showMore, setShowMore] = useState(false);
   const theme = useTheme();
   const sortedConfig = getPreferredConfig(config);
-  const displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
+  const displayListConfig = showMore
+    ? sortedConfig
+    : sortedConfig.slice(0, displayCount);
 
   return (
     <ModalContainer minWidth="320px">
-      <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}>
+      <ModalHeader
+        background={getThemeValue("colors.gradients.bubblegum")(theme)}
+      >
         <ModalTitle>
-          <Heading>Connect Wallet</Heading>
+          <Heading>Connect Wallet(test)</Heading>
         </ModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </ModalHeader>
@@ -67,7 +87,11 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
           <Grid gridTemplateColumns="1fr 1fr">
             {displayListConfig.map((wallet) => (
               <Box key={wallet.title}>
-                <WalletCard walletConfig={wallet} login={login} onDismiss={onDismiss} />
+                <WalletCard
+                  walletConfig={wallet}
+                  login={login}
+                  onDismiss={onDismiss}
+                />
               </Box>
             ))}
             {!showMore && <MoreWalletCard onClick={() => setShowMore(true)} />}

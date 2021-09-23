@@ -4712,11 +4712,13 @@ var ConnectModal = function (_a) {
     var _d = useState(false), showMore = _d[0], setShowMore = _d[1];
     var theme = useTheme();
     var sortedConfig = getPreferredConfig(connectors);
-    var displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
+    var displayListConfig = showMore
+        ? sortedConfig
+        : sortedConfig.slice(0, displayCount);
     return (React.createElement(ModalContainer, { minWidth: "320px" },
         React.createElement(ModalHeader, { background: getThemeValue("colors.gradients.bubblegum")(theme) },
             React.createElement(ModalTitle, null,
-                React.createElement(Heading, null, "Connect Wallet")),
+                React.createElement(Heading, null, "Connect Wallet(test)")),
             React.createElement(ModalCloseButton, { onDismiss: onDismiss })),
         React.createElement(ModalBody, { width: ["320px", null, "340px"] },
             React.createElement(WalletWrapper, { py: "24px", maxHeight: "453px", overflowY: "auto" },

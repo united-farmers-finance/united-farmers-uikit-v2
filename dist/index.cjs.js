@@ -4305,10 +4305,10 @@ var TelegramLink = function () { return (React__default['default'].createElement
     var Icon = Icons[telegram.icon];
     var iconProps = {
         width: "32px",
-        color: "textSubtle",
+        color: "#aa8929",
         style: { cursor: "pointer" },
     };
-    var mr = "15px";
+    var mr = "12px";
     // if (social.items) {
     //   return (
     //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>

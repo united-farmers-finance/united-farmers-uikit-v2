@@ -14,10 +14,10 @@ const TelegramLink: React.FC = () => (
       const Icon = Icons[telegram.icon];
       const iconProps = {
         width: "32px",
-        color: "textSubtle",
+        color: "#aa8929",
         style: { cursor: "pointer" },
       };
-      const mr = "15px";
+      const mr = "12px";
       // if (social.items) {
       //   return (
       //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>

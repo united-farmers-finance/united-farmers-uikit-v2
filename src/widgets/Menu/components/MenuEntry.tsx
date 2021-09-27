@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLAttributeAnchorTarget } from "react";
 import styled, { keyframes, DefaultTheme } from "styled-components";
 import { Text } from "../../../components/Text";
 import { Colors } from "../../../theme/types";
@@ -8,6 +8,7 @@ export interface Props {
   secondary?: boolean;
   isActive?: boolean;
   theme: DefaultTheme;
+  target?: HTMLAttributeAnchorTarget | undefined;
 }
 
 const rainbowAnimation = keyframes`
@@ -21,7 +22,8 @@ const rainbowAnimation = keyframes`
 `;
 
 const LinkLabel = styled.div<{ isPushed: boolean }>`
-  color: ${({ isPushed, theme }) => (isPushed ? theme.colors.textSubtle : "transparent")};
+  color: ${({ isPushed, theme }) =>
+    isPushed ? theme.colors.textSubtle : "transparent"};
   transition: color 0.4s;
   flex-grow: 1;
 `;
@@ -33,9 +35,11 @@ const MenuEntry = styled.div<Props>`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
-  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
+  background-color: ${({ secondary, theme }) =>
+    secondary ? theme.colors.background : "transparent"};
   color: ${({ theme }) => theme.colors.textSubtle};
-  box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
+  box-shadow: ${({ isActive, theme }) =>
+    isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none"};
 
   a {
     display: flex;
@@ -77,6 +81,9 @@ const LinkStatus = styled(Text)<{ color: keyof Colors }>`
   margin-left: 8px;
 `;
 
-const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed);
+const LinkLabelMemo = React.memo(
+  LinkLabel,
+  (prev, next) => prev.isPushed === next.isPushed
+);
 
 export { MenuEntry, LinkStatus, LinkLabelMemo as LinkLabel };

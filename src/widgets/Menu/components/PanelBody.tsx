@@ -86,6 +86,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             key={entry.label}
             isActive={entry.href === location.pathname}
             className={calloutClass}
+            target={entry.target}
           >
             <MenuLink
               href={entry.href}

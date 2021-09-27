@@ -47,6 +47,16 @@ export const links = [
     href: "/syrup",
   },
   {
+    label: "WhitePaper",
+    icon: "NftIcon",
+    href: "https://uff-frontend.s3.filebase.com/uff-whitepaper.pdf",
+  },
+  {
+    label: "WhitePaper",
+    icon: "NFTIcon",
+    href: "https://uff-frontend.s3.filebase.com/uff-whitepaper.pdf",
+  },
+  {
     label: "Lottery",
     icon: "TicketIcon",
     href: "/lottery",

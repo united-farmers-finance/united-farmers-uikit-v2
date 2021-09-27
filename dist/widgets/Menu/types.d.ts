@@ -24,6 +24,7 @@ export interface MenuSubEntry {
     status?: LinkStatus;
 }
 export interface MenuEntry {
+    target?: HTMLAttributeAnchorTarget | undefined;
     label: string;
     icon: string;
     items?: MenuSubEntry[];

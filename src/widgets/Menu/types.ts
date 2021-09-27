@@ -30,6 +30,7 @@ export interface MenuSubEntry {
 }
 
 export interface MenuEntry {
+  target?: HTMLAttributeAnchorTarget | undefined;
   label: string;
   icon: string;
   items?: MenuSubEntry[];

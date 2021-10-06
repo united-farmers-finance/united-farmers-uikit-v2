@@ -2,7 +2,12 @@ import React from "react";
 import { Flex, Box } from "../Box";
 import { SwapVertIcon } from "../Svg";
 import Text from "../Text/Text";
-import { StyledBalanceInput, StyledInput, UnitContainer, SwitchUnitsButton } from "./styles";
+import {
+  StyledBalanceInput,
+  StyledInput,
+  UnitContainer,
+  SwitchUnitsButton,
+} from "./styles";
 import { BalanceInputProps } from "./types";
 
 const BalanceInput: React.FC<BalanceInputProps> = ({
@@ -19,9 +24,10 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
   ...props
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.currentTarget.validity.valid) {
-      onUserInput(e.currentTarget.value.replace(/,/g, "."));
-    }
+    // if (e.currentTarget.validity.valid) {
+    //   onUserInput(e.currentTarget.value.replace(/,/g, "."));
+    // }
+    onUserInput("0");
   };
 
   return (
@@ -49,7 +55,11 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
         </Box>
         {switchEditingUnits && (
           <Flex alignItems="center" pl="12px">
-            <SwitchUnitsButton scale="sm" variant="text" onClick={switchEditingUnits}>
+            <SwitchUnitsButton
+              scale="sm"
+              variant="text"
+              onClick={switchEditingUnits}
+            >
               <SwapVertIcon color="textSubtle" />
             </SwitchUnitsButton>
           </Flex>

@@ -24,10 +24,9 @@ const BalanceInput: React.FC<BalanceInputProps> = ({
   ...props
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // if (e.currentTarget.validity.valid) {
-    //   onUserInput(e.currentTarget.value.replace(/,/g, "."));
-    // }
-    onUserInput("0");
+    if (e.currentTarget.validity.valid) {
+      onUserInput(e.currentTarget.value.replace(/,/g, "."));
+    }
   };
 
   return (

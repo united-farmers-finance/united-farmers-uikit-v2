@@ -8,6 +8,7 @@ import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
+import GrainPrice from "./GrainPrice";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -40,6 +41,7 @@ const PanelFooter: React.FC<Props> = ({
   toggleTheme,
   isDark,
   cakePriceUsd,
+  grainPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -58,6 +60,10 @@ const PanelFooter: React.FC<Props> = ({
     <Container>
       <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
+        <SocialLinks />
+      </SocialEntry>
+      <SocialEntry>
+        <GrainPrice grainPriceUsd={grainPriceUsd} />
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>

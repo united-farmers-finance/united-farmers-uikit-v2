@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon } from "../../../components/Svg";
+import { GrainRoundIcon } from "../../../components/Svg";
 import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 
@@ -27,7 +27,7 @@ const GrainPrice: React.FC<Props> = ({ grainPriceUsd }) => {
       href="https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB"
       target="_blank"
     >
-      <PancakeRoundIcon width="24px" mr="8px" />
+      <GrainRoundIcon width="24px" mr="8px" />
       <Text color="textSubtle" bold>{`$${grainPriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
   ) : (

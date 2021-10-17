@@ -22,6 +22,7 @@ const PriceLink = styled.a`
 `;
 
 const GrainPrice: React.FC<Props> = ({ grainPriceUsd }) => {
+  console.log("from uikit, grainPriceUsd", grainPriceUsd);
   return grainPriceUsd ? (
     <PriceLink
       href="https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB"
@@ -31,7 +32,15 @@ const GrainPrice: React.FC<Props> = ({ grainPriceUsd }) => {
       <Text color="textSubtle" bold>{`$${grainPriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
   ) : (
-    <Skeleton width={80} height={24} />
+    <PriceLink
+      href="https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB"
+      target="_blank"
+    >
+      <PancakeRoundIcon width="24px" mr="8px" />
+      <Text color="textSubtle" bold>
+        undefined
+      </Text>
+    </PriceLink>
   );
 };
 

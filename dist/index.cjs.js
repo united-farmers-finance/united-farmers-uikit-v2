@@ -4262,9 +4262,12 @@ var SocialLinks$1 = React__default['default'].memo(SocialLinks, function () { re
 var PriceLink = styled__default['default'].a(templateObject_1$c || (templateObject_1$c = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var GrainPrice = function (_a) {
     var grainPriceUsd = _a.grainPriceUsd;
+    console.log("from uikit, grainPriceUsd", grainPriceUsd);
     return grainPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB", target: "_blank" },
         React__default['default'].createElement(Icon$Z, { width: "24px", mr: "8px" }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + grainPriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + grainPriceUsd.toFixed(3)))) : (React__default['default'].createElement(PriceLink, { href: "https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB", target: "_blank" },
+        React__default['default'].createElement(Icon$Z, { width: "24px", mr: "8px" }),
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "undefined")));
 };
 var GrainPrice$1 = React__default['default'].memo(GrainPrice);
 var templateObject_1$c;

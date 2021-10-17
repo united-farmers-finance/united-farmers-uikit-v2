@@ -4262,12 +4262,9 @@ var SocialLinks$1 = React__default['default'].memo(SocialLinks, function () { re
 var PriceLink = styled__default['default'].a(templateObject_1$c || (templateObject_1$c = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var GrainPrice = function (_a) {
     var grainPriceUsd = _a.grainPriceUsd;
-    console.log("from uikit, grainPriceUsd", grainPriceUsd);
     return grainPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB", target: "_blank" },
         React__default['default'].createElement(Icon$Z, { width: "24px", mr: "8px" }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + grainPriceUsd.toFixed(3)))) : (React__default['default'].createElement(PriceLink, { href: "https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB", target: "_blank" },
-        React__default['default'].createElement(Icon$Z, { width: "24px", mr: "8px" }),
-        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "undefined")));
+        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + grainPriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }));
 };
 var GrainPrice$1 = React__default['default'].memo(GrainPrice);
 var templateObject_1$c;
@@ -4384,7 +4381,7 @@ var MobileOnlyOverlay = styled__default['default'](Overlay)(templateObject_5 || 
 });
 var Menu$1 = function (_a) {
     var _b;
-    var userMenu = _a.userMenu, globalMenu = _a.globalMenu, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, children = _a.children;
+    var userMenu = _a.userMenu, globalMenu = _a.globalMenu, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd, links = _a.links, children = _a.children;
     var _c = useMatchBreakpoints(), isMobile = _c.isMobile, isTablet = _c.isTablet;
     var isSmallerScreen = isMobile || isTablet;
     var _d = React.useState(!isSmallerScreen), isPushed = _d[0], setIsPushed = _d[1];
@@ -4431,7 +4428,7 @@ var Menu$1 = function (_a) {
                 " ",
                 userMenu)),
         React__default['default'].createElement(BodyWrapper, null,
-            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isSmallerScreen, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
+            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isSmallerScreen, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, grainPriceUsd: grainPriceUsd, pushNav: setIsPushed, links: links }),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };

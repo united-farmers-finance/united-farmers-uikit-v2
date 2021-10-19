@@ -35,6 +35,11 @@ const SocialEntry = styled.div`
   padding: 0 16px;
 `;
 
+const EmptyBox = styled.div`
+  height:10px;
+  width:10px;
+`
+
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
@@ -64,7 +69,7 @@ const PanelFooter: React.FC<Props> = ({
       </SocialEntry>
       <SocialEntry>
         <GrainPrice grainPriceUsd={grainPriceUsd} />
-        <SocialLinks />
+        <EmptyBox />
       </SocialEntry>
       <SettingsEntry>
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}

@@ -24,7 +24,7 @@ const PriceLink = styled.a`
 const GrainPrice: React.FC<Props> = ({ grainPriceUsd }) => {
   return grainPriceUsd ? (
     <PriceLink
-      href="https://charts.bogged.finance/0x3993a8f82F5e1a5381E678Fc237a3da668C1F4eB"
+      href="https://charts.bogged.finance/0x3965E8778e555608aF5B1956f6fFb1F0003Fc3d0"
       target="_blank"
     >
       <GrainRoundIcon width="24px" mr="8px" />

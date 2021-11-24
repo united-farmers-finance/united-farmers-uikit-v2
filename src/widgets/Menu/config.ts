@@ -160,11 +160,11 @@ export const socials = [
     icon: "TwitterIcon",
     href: "https://twitter.com/UnitedFarmersF",
   },
-  // {
-  //   label: "Reddit",
-  //   icon: "RedditIcon",
-  //   href: "https://www.reddit.com/r/unitedfarmersfinance",
-  // }
+  {
+    label: "Discord",
+    icon: "DiscordIcon",
+    href: "https://www.reddit.com/r/unitedfarmersfinance",
+  }
 ];
 
 export const telegram = [

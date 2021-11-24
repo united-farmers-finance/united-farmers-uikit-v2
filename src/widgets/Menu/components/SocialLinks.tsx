@@ -17,7 +17,7 @@ const SocialLinks: React.FC = () => (
         color: "textSubtle",
         style: { cursor: "pointer" },
       };
-      const mr = index < socials.length - 1 ? "24px" : 0;
+      const mr = index < socials.length - 1 ? "12px" : 0;
       // if (social.items) {
       //   return (
       //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>

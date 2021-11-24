@@ -4253,7 +4253,7 @@ var SocialLinks = function () { return (React__default["default"].createElement(
         color: "textSubtle",
         style: { cursor: "pointer" },
     };
-    var mr = index < socials.length - 1 ? "24px" : 0;
+    var mr = index < socials.length - 1 ? "12px" : 0;
     // if (social.items) {
     //   return (
     //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>

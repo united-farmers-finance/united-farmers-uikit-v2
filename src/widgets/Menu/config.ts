@@ -163,8 +163,8 @@ export const socials = [
   {
     label: "Discord",
     icon: "DiscordIcon",
-    href: "https://www.reddit.com/r/unitedfarmersfinance",
-  }
+    href: "https://discord.com/invite/GBHGfJfZxU",
+  },
 ];
 
 export const telegram = [

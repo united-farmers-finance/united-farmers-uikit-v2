@@ -2278,18 +2278,18 @@ var BunnyButt = styled__default["default"].div(templateObject_3$a || (templateOb
 });
 var BunnySlider = styled__default["default"].div(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"], ["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"])));
 var StyledInput = styled__default["default"].input(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"], ["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"])), getCursorStyle, getBaseThumbStyles, getBaseThumbStyles, getBaseThumbStyles);
-var BarBackground = styled__default["default"].div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
+var BarBackground = styled__default["default"].div(templateObject_6$2 || (templateObject_6$2 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
     var theme = _a.theme, disabled = _a.disabled;
     return theme.colors[disabled ? "textDisabled" : "inputSecondary"];
 });
-var BarProgress = styled__default["default"].div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"], ["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"])), function (_a) {
+var BarProgress = styled__default["default"].div(templateObject_7$2 || (templateObject_7$2 = __makeTemplateObject(["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"], ["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
 }, function (_a) {
     var disabled = _a.disabled;
     return (disabled ? "grayscale(100%)" : "none");
 });
-var templateObject_1$x, templateObject_2$i, templateObject_3$a, templateObject_4$7, templateObject_5$3, templateObject_6$1, templateObject_7$1;
+var templateObject_1$x, templateObject_2$i, templateObject_3$a, templateObject_4$7, templateObject_5$3, templateObject_6$2, templateObject_7$2;
 
 var Slider = function (_a) {
     var name = _a.name, min = _a.min, max = _a.max, value = _a.value, onValueChanged = _a.onValueChanged, valueLabel = _a.valueLabel, _b = _a.step, step = _b === void 0 ? "any" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, props = __rest(_a, ["name", "min", "max", "value", "onValueChanged", "valueLabel", "step", "disabled"]);
@@ -2415,8 +2415,8 @@ var ChildrenRightWrapper = styled__default["default"](ChildrenWrapper)(templateO
     var theme = _a.theme;
     return theme.mediaQueries.md;
 });
-var Wrapper$2 = styled__default["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
-var StepNumber = styled__default["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
+var Wrapper$2 = styled__default["default"].div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
+var StepNumber = styled__default["default"].div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
     var theme = _a.theme, status = _a.status;
     return theme.colors[status === "current" ? "secondary" : "invertedContrast"];
 }, function (_a) {
@@ -2443,7 +2443,7 @@ var Step = function (_a) {
             index < numberOfSteps - 1 && React__default["default"].createElement(Connector, { status: status })),
         React__default["default"].createElement(ChildrenRightWrapper, { isVisible: isIndexPair }, children)));
 };
-var templateObject_1$t, templateObject_2$f, templateObject_3$7, templateObject_4$4, templateObject_5$1, templateObject_6, templateObject_7;
+var templateObject_1$t, templateObject_2$f, templateObject_3$7, templateObject_4$4, templateObject_5$1, templateObject_6$1, templateObject_7$1;
 
 var SubMenuContainer = styled__default["default"].div(templateObject_1$s || (templateObject_1$s = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  min-width: 136px;\n  background: ", ";\n  border-radius: ", ";\n  border: ", ";\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  min-width: 136px;\n  background: ", ";\n  border-radius: ", ";\n  border: ", ";\n"])), function (_a) {
     var theme = _a.theme;
@@ -4392,6 +4392,9 @@ var MobileOnlyOverlay = styled__default["default"](Overlay)(templateObject_5 || 
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
+var Testing = styled__default["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  height: 30px;\n  max-width: 400px;\n  margin: 0 auto;\n  position: relative;\n  background-color: white;\n  color: #f49725;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n"], ["\n  display: flex;\n  align-items: center;\n  height: 30px;\n  max-width: 400px;\n  margin: 0 auto;\n  position: relative;\n  background-color: white;\n  color: #f49725;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n"])));
+var AnimationShowing = styled.keyframes(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  100% {\n    transform: translateX(-66.6666%);\n  }\n"], ["\n  100% {\n    transform: translateX(-66.6666%);\n  }\n"])));
+var TextMoving = styled__default["default"].div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  animation: ", " 10s linear infinite;\n  white-space: nowrap;\n"], ["\n  animation: ", " 10s linear infinite;\n  white-space: nowrap;\n"])), AnimationShowing);
 var Menu$1 = function (_a) {
     var _b;
     var userMenu = _a.userMenu, globalMenu = _a.globalMenu, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd, links = _a.links, children = _a.children;
@@ -4435,6 +4438,9 @@ var Menu$1 = function (_a) {
         React__default["default"].createElement(StyledNav, { showMenu: showMenu },
             React__default["default"].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
             React__default["default"].createElement(Flex, null,
+                React__default["default"].createElement(Testing, null,
+                    React__default["default"].createElement(TextMoving, null, "IMPORTANT NOTICE: UFF IS MIGRATING TO UFX. GRAIN IS MIGRATING TO UFGRAIN. CLICK HERE FOR INFO"))),
+            React__default["default"].createElement(Flex, null,
                 globalMenu,
                 " ",
                 React__default["default"].createElement(TelegramLink$1, null),
@@ -4445,7 +4451,7 @@ var Menu$1 = function (_a) {
             React__default["default"].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default["default"].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$9, templateObject_2$4, templateObject_3$1, templateObject_4, templateObject_5;
+var templateObject_1$9, templateObject_2$4, templateObject_3$1, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;
 
 var variants = {
     DEFAULT: "default",

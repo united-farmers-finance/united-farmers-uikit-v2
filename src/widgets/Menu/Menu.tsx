@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
 import Flex from "../../components/Box/Flex";
@@ -68,6 +68,30 @@ const MobileOnlyOverlay = styled(Overlay)`
   }
 `;
 
+const Testing = styled.div`
+  display: flex;
+  align-items: center;
+  height: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  color: #f49725;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+`;
+
+const AnimationShowing = keyframes`
+  100% {
+    transform: translateX(-66.6666%);
+  }
+`;
+
+const TextMoving = styled.div`
+  animation: ${AnimationShowing} 10s linear infinite;
+  white-space: nowrap;
+`;
+
 const Menu: React.FC<NavProps> = ({
   userMenu,
   globalMenu,
@@ -131,6 +155,14 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         {/* Add testing usermenu */}
+        <Flex>
+          <Testing>
+            <TextMoving>
+              IMPORTANT NOTICE: UFF IS MIGRATING TO UFX. GRAIN IS MIGRATING TO
+              UFGRAIN. CLICK HERE FOR INFO
+            </TextMoving>
+          </Testing>
+        </Flex>
         <Flex>
           {globalMenu} <TelegramLink /> {userMenu}
         </Flex>

@@ -71,14 +71,15 @@ const MobileOnlyOverlay = styled(Overlay)`
 const Testing = styled.div`
   display: flex;
   align-items: center;
-  height: 30px;
-  max-width: 400px;
+  min-width: 30%;
+  max-width: 300px;
   margin: 0 auto;
   position: relative;
   background-color: white;
   color: #f49725;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  cursor: pointer;
 `;
 
 const AnimationShowing = keyframes`
@@ -94,6 +95,7 @@ const TextMoving = styled.div`
 
 const Menu: React.FC<NavProps> = ({
   userMenu,
+  notificationMenu,
   globalMenu,
   isDark,
   toggleTheme,
@@ -155,14 +157,7 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         {/* Add testing usermenu */}
-        <Flex>
-          <Testing>
-            <TextMoving>
-              IMPORTANT NOTICE: UFF IS MIGRATING TO UFX. GRAIN IS MIGRATING TO
-              UFGRAIN. CLICK HERE FOR INFO
-            </TextMoving>
-          </Testing>
-        </Flex>
+        <Flex>{notificationMenu}</Flex>
         <Flex>
           {globalMenu} <TelegramLink /> {userMenu}
         </Flex>

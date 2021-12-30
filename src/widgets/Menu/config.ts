@@ -153,7 +153,7 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://t.me/united_farmers_defi",
+    href: "https://t.me/united_farmers_x",
   },
   {
     label: "Twitter",
@@ -171,7 +171,7 @@ export const telegram = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://t.me/united_farmers_defi",
+    href: "https://t.me/united_farmers_x",
   },
 ];
 

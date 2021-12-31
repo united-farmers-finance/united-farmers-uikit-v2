@@ -52,7 +52,8 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   max-width: 100%;
   background-image: url("/images/Back1.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-position: center;
+  background-size: cover;
 
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-left: ${({ isPushed }) =>

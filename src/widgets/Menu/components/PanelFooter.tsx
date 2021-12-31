@@ -15,7 +15,9 @@ interface Props extends PanelProps, PushedProps {}
 const Container = styled.div`
   flex: none;
   padding: 8px 4px;
-  background-color: ${({ theme }) => theme.nav.background};
+  /* background-color: ${({ theme }) => theme.nav.background}; */
+  background-color: #e3e4fb;
+
   border-top: solid 2px rgba(133, 133, 133, 0.1);
 `;
 
@@ -36,9 +38,9 @@ const SocialEntry = styled.div`
 `;
 
 const EmptyBox = styled.div`
-  height:10px;
-  width:10px;
-`
+  height: 10px;
+  width: 10px;
+`;
 
 const PanelFooter: React.FC<Props> = ({
   isPushed,

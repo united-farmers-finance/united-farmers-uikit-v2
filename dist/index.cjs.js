@@ -4089,7 +4089,7 @@ var socials = [
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/UnitedFarmersF",
+        href: "https://www.twitter.com/UnitedFarmersX",
     },
     {
         label: "Discord",

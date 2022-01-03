@@ -163,7 +163,7 @@ export const socials = [
   {
     label: "Discord",
     icon: "DiscordIcon",
-    href: "https://discord.com/invite/GBHGfJfZxU",
+    href: "https://discord.gg/b48fEuUNAQ",
   },
 ];
 

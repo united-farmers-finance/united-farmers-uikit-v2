@@ -4304,7 +4304,9 @@ var SocialEntry = styled.div(templateObject_3$2 || (templateObject_3$2 = __makeT
 var EmptyBox = styled.div(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  height: 10px;\n  width: 10px;\n"], ["\n  height: 10px;\n  width: 10px;\n"])));
 var Button = styled.button(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  width: 180px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"], ["\n  width: 180px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"])));
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd; _a.currentLang; _a.langs; _a.setLang;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd; _a.currentLang; _a.langs; _a.setLang; var isMobile = _a.isMobile;
+    // Close the menu when a user clicks a link on mobile
+    var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
     if (!isPushed) {
         return (React.createElement(Container, null,
             React.createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
@@ -4317,7 +4319,7 @@ var PanelFooter = function (_a) {
         React.createElement(SocialEntry, null,
             React.createElement(GrainPrice$1, { grainPriceUsd: grainPriceUsd }),
             React.createElement(EmptyBox, null)),
-        React.createElement(Link$1, { to: "/showCharts" },
+        React.createElement(Link$1, { onClick: handleClick, to: "/showCharts" },
             React.createElement(Button, null, "Check Token Price")),
         React.createElement(SettingsEntry, null)));
 };

@@ -11,7 +11,9 @@ import LangSelector from "./LangSelector";
 import GrainPrice from "./GrainPrice";
 import { Link } from "react-router-dom";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PanelProps, PushedProps {
+  isMobile: boolean;
+}
 
 const Container = styled.div`
   flex: none;
@@ -70,7 +72,10 @@ const PanelFooter: React.FC<Props> = ({
   currentLang,
   langs,
   setLang,
+  isMobile,
 }) => {
+  // Close the menu when a user clicks a link on mobile
+  const handleClick = isMobile ? () => pushNav(false) : undefined;
   if (!isPushed) {
     return (
       <Container>
@@ -91,7 +96,7 @@ const PanelFooter: React.FC<Props> = ({
         <GrainPrice grainPriceUsd={grainPriceUsd} />
         <EmptyBox />
       </SocialEntry>
-      <Link to="/showCharts">
+      <Link onClick={handleClick} to="/showCharts">
         <Button>Check Token Price</Button>
       </Link>
       <SettingsEntry>

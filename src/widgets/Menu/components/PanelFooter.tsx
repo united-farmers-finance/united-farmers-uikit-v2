@@ -9,6 +9,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 import GrainPrice from "./GrainPrice";
+import { Link } from "react-router-dom";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -42,6 +43,22 @@ const EmptyBox = styled.div`
   width: 10px;
 `;
 
+const Button = styled.button`
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #aa8929;
+  &:hover {
+    transition: 0.3s;
+    background-color: #baa461;
+  }
+`;
+
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
@@ -73,6 +90,9 @@ const PanelFooter: React.FC<Props> = ({
         <GrainPrice grainPriceUsd={grainPriceUsd} />
         <EmptyBox />
       </SocialEntry>
+      <Link to="/showCharts">
+        <Button>Token Price</Button>
+      </Link>
       <SettingsEntry>
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
         {/* <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} /> */}

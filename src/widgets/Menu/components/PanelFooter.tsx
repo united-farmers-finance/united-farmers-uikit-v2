@@ -44,7 +44,7 @@ const EmptyBox = styled.div`
 `;
 
 const Button = styled.button`
-  width: 240px;
+  width: 180px;
   height: 35px;
   border: none;
   border-radius: 18px;
@@ -92,7 +92,7 @@ const PanelFooter: React.FC<Props> = ({
         <EmptyBox />
       </SocialEntry>
       <Link to="/showCharts">
-        <Button>Check The Token Price</Button>
+        <Button>Check Token Price</Button>
       </Link>
       <SettingsEntry>
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}

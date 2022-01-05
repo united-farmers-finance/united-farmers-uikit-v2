@@ -4302,7 +4302,7 @@ var Container = styled.div(templateObject_1$b || (templateObject_1$b = __makeTem
 var SettingsEntry = styled.div(templateObject_2$5 || (templateObject_2$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 var EmptyBox = styled.div(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  height: 10px;\n  width: 10px;\n"], ["\n  height: 10px;\n  width: 10px;\n"])));
-var Button = styled.button(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  width: 180px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"], ["\n  width: 180px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"])));
+var Button = styled.button(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"], ["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"])));
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd; _a.currentLang; _a.langs; _a.setLang; var isMobile = _a.isMobile;
     // Close the menu when a user clicks a link on mobile
@@ -4320,7 +4320,7 @@ var PanelFooter = function (_a) {
             React.createElement(GrainPrice$1, { grainPriceUsd: grainPriceUsd }),
             React.createElement(EmptyBox, null)),
         React.createElement(Link$1, { onClick: handleClick, to: "/showCharts" },
-            React.createElement(Button, null, "Check Token Price")),
+            React.createElement(Button, null, "Price Charts")),
         React.createElement(SettingsEntry, null)));
 };
 var templateObject_1$b, templateObject_2$5, templateObject_3$2, templateObject_4$1, templateObject_5$1;

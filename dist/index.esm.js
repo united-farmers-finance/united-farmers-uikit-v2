@@ -4086,11 +4086,21 @@ var links = [
         ],
     },
 ];
-var telegram = [
+var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
         href: "https://t.me/united_farmers_x",
+    },
+    {
+        label: "Twitter",
+        icon: "TwitterIcon",
+        href: "https://www.twitter.com/UnitedFarmersX",
+    },
+    {
+        label: "Discord",
+        icon: "DiscordIcon",
+        href: "https://discord.gg/b48fEuUNAQ",
     },
 ];
 var MENU_HEIGHT = 64;
@@ -4287,8 +4297,8 @@ var Panel = function (props) {
 var templateObject_1$a;
 
 var Icons = IconModule;
-var TelegramLink = function () { return (React.createElement(Flex, null, telegram.map(function (telegram, index) {
-    var Icon = Icons[telegram.icon];
+var TelegramLink = function () { return (React.createElement(Flex, null, socials.map(function (socials, index) {
+    var Icon = Icons[socials.icon];
     var iconProps = {
         width: "32px",
         color: "#aa8929",
@@ -4306,7 +4316,7 @@ var TelegramLink = function () { return (React.createElement(Flex, null, telegra
     //     </Dropdown>
     //   );
     // }
-    return (React.createElement(Link, { external: true, key: telegram.label, href: telegram.href, "aria-label": telegram.label, mr: mr },
+    return (React.createElement(Link, { external: true, key: socials.label, href: socials.href, "aria-label": socials.label, mr: mr },
         React.createElement(Icon, __assign({}, iconProps))));
 }))); };
 var TelegramLink$1 = React.memo(TelegramLink, function () { return true; });

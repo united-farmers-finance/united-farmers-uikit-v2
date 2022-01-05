@@ -45,6 +45,11 @@ const EmptyBox = styled.div`
   width: 10px;
 `;
 
+const MarginBox = styled.div`
+  width: 100px;
+  height: 10px;
+`;
+
 const Button = styled.button`
   width: 140px;
   height: 35px;
@@ -96,6 +101,7 @@ const PanelFooter: React.FC<Props> = ({
         <GrainPrice grainPriceUsd={grainPriceUsd} />
         <EmptyBox />
       </SocialEntry> */}
+      <MarginBox />
       <Link onClick={handleClick} to="/showCharts">
         <Button>Price Charts</Button>
       </Link>

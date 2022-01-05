@@ -2278,7 +2278,7 @@ var BunnyButt = styled__default["default"].div(templateObject_3$a || (templateOb
 });
 var BunnySlider = styled__default["default"].div(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"], ["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"])));
 var StyledInput = styled__default["default"].input(templateObject_5$4 || (templateObject_5$4 = __makeTemplateObject(["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"], ["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"])), getCursorStyle, getBaseThumbStyles, getBaseThumbStyles, getBaseThumbStyles);
-var BarBackground = styled__default["default"].div(templateObject_6$2 || (templateObject_6$2 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
+var BarBackground = styled__default["default"].div(templateObject_6$3 || (templateObject_6$3 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
     var theme = _a.theme, disabled = _a.disabled;
     return theme.colors[disabled ? "textDisabled" : "inputSecondary"];
 });
@@ -2289,7 +2289,7 @@ var BarProgress = styled__default["default"].div(templateObject_7$2 || (template
     var disabled = _a.disabled;
     return (disabled ? "grayscale(100%)" : "none");
 });
-var templateObject_1$v, templateObject_2$i, templateObject_3$a, templateObject_4$7, templateObject_5$4, templateObject_6$2, templateObject_7$2;
+var templateObject_1$v, templateObject_2$i, templateObject_3$a, templateObject_4$7, templateObject_5$4, templateObject_6$3, templateObject_7$2;
 
 var Slider = function (_a) {
     var name = _a.name, min = _a.min, max = _a.max, value = _a.value, onValueChanged = _a.onValueChanged, valueLabel = _a.valueLabel, _b = _a.step, step = _b === void 0 ? "any" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, props = __rest(_a, ["name", "min", "max", "value", "onValueChanged", "valueLabel", "step", "disabled"]);
@@ -2415,7 +2415,7 @@ var ChildrenRightWrapper = styled__default["default"](ChildrenWrapper)(templateO
     var theme = _a.theme;
     return theme.mediaQueries.md;
 });
-var Wrapper$2 = styled__default["default"].div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
+var Wrapper$2 = styled__default["default"].div(templateObject_6$2 || (templateObject_6$2 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
 var StepNumber = styled__default["default"].div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
     var theme = _a.theme, status = _a.status;
     return theme.colors[status === "current" ? "secondary" : "invertedContrast"];
@@ -2443,7 +2443,7 @@ var Step = function (_a) {
             index < numberOfSteps - 1 && React__default["default"].createElement(Connector, { status: status })),
         React__default["default"].createElement(ChildrenRightWrapper, { isVisible: isIndexPair }, children)));
 };
-var templateObject_1$r, templateObject_2$f, templateObject_3$7, templateObject_4$4, templateObject_5$2, templateObject_6$1, templateObject_7$1;
+var templateObject_1$r, templateObject_2$f, templateObject_3$7, templateObject_4$4, templateObject_5$2, templateObject_6$2, templateObject_7$1;
 
 var SubMenuContainer = styled__default["default"].div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  min-width: 136px;\n  background: ", ";\n  border-radius: ", ";\n  border: ", ";\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  min-width: 136px;\n  background: ", ";\n  border-radius: ", ";\n  border: ", ";\n"])), function (_a) {
     var theme = _a.theme;
@@ -4246,7 +4246,8 @@ var Container = styled__default["default"].div(templateObject_1$b || (templateOb
 var SettingsEntry = styled__default["default"].div(templateObject_2$5 || (templateObject_2$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 styled__default["default"].div(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 styled__default["default"].div(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  height: 10px;\n  width: 10px;\n"], ["\n  height: 10px;\n  width: 10px;\n"])));
-var Button = styled__default["default"].button(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"], ["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"])));
+var MarginBox = styled__default["default"].div(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  width: 100px;\n  height: 10px;\n"], ["\n  width: 100px;\n  height: 10px;\n"])));
+var Button = styled__default["default"].button(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"], ["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"])));
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; _a.cakePriceUsd; _a.grainPriceUsd; _a.currentLang; _a.langs; _a.setLang; var isMobile = _a.isMobile;
     // Close the menu when a user clicks a link on mobile
@@ -4257,11 +4258,12 @@ var PanelFooter = function (_a) {
                 React__default["default"].createElement(Icon$1x, null))));
     }
     return (React__default["default"].createElement(Container, null,
+        React__default["default"].createElement(MarginBox, null),
         React__default["default"].createElement(reactRouterDom.Link, { onClick: handleClick, to: "/showCharts" },
             React__default["default"].createElement(Button, null, "Price Charts")),
         React__default["default"].createElement(SettingsEntry, null)));
 };
-var templateObject_1$b, templateObject_2$5, templateObject_3$2, templateObject_4$1, templateObject_5$1;
+var templateObject_1$b, templateObject_2$5, templateObject_3$2, templateObject_4$1, templateObject_5$1, templateObject_6$1;
 
 var StyledPanel = styled__default["default"].div(templateObject_1$a || (templateObject_1$a = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  /* background-color: ", "; */\n  background-color: #e3e4fb;\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  /* background-color: ", "; */\n  background-color: #e3e4fb;\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ",
     ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ",

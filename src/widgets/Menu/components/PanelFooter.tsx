@@ -88,14 +88,14 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      <SocialEntry>
+      {/* <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
         <SocialLinks />
       </SocialEntry>
       <SocialEntry>
         <GrainPrice grainPriceUsd={grainPriceUsd} />
         <EmptyBox />
-      </SocialEntry>
+      </SocialEntry> */}
       <Link onClick={handleClick} to="/showCharts">
         <Button>Price Charts</Button>
       </Link>

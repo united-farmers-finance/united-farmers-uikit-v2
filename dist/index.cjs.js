@@ -3045,7 +3045,7 @@ var Input = styled__default["default"].input(templateObject_2$b || (templateObje
 });
 var StyledToggle = styled__default["default"].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"])), function (_a) {
     var theme = _a.theme, checked = _a.checked;
-    return theme.colors[checked ? "success" : "input"];
+    return theme.colors[checked ? "success" : "bronze"];
 }, function (_a) {
     var theme = _a.theme;
     return theme.shadows.inset;

@@ -8,6 +8,7 @@ export declare const shadows: {
     success: string;
     warning: string;
     focus: string;
+    focus2: string;
     inset: string;
 };
 declare const _default: {
@@ -21,6 +22,7 @@ declare const _default: {
         success: string;
         warning: string;
         focus: string;
+        focus2: string;
         inset: string;
     };
     radii: {

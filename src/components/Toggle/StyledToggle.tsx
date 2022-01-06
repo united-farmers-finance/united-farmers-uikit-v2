@@ -63,11 +63,11 @@ export const Input = styled.input<InputProps>`
   }
 
   &:focus + ${Handle} {
-    /* box-shadow: ${({ theme }) => theme.shadows.focus}; */
+    box-shadow: ${({ theme }) => theme.shadows.focus2};
   }
 
   &:hover + ${Handle}:not(:disabled):not(:checked) {
-    /* box-shadow: ${({ theme }) => theme.shadows.focus}; */
+    box-shadow: ${({ theme }) => theme.shadows.focus2};
   }
 `;
 

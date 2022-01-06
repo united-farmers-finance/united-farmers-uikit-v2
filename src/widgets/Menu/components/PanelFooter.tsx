@@ -93,18 +93,18 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      {/* <SocialEntry>
+      <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
         <SocialLinks />
       </SocialEntry>
       <SocialEntry>
         <GrainPrice grainPriceUsd={grainPriceUsd} />
         <EmptyBox />
-      </SocialEntry> */}
-      <MarginBox />
+      </SocialEntry>
+      {/* <MarginBox />
       <Link onClick={handleClick} to="/showCharts">
         <Button>Price Charts</Button>
-      </Link>
+      </Link> */}
       <SettingsEntry>
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
         {/* <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} /> */}

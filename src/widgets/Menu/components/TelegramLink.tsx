@@ -4,14 +4,14 @@ import Flex from "../../../components/Box/Flex";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import Link from "../../../components/Link/Link";
 import * as IconModule from "../icons";
-import { socials } from "../config";
+import { telegram } from "../config";
 
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const TelegramLink: React.FC = () => (
   <Flex>
-    {socials.map((socials, index) => {
-      const Icon = Icons[socials.icon];
+    {telegram.map((telegram, index) => {
+      const Icon = Icons[telegram.icon];
       const iconProps = {
         width: "32px",
         color: "#aa8929",
@@ -32,9 +32,9 @@ const TelegramLink: React.FC = () => (
       return (
         <Link
           external
-          key={socials.label}
-          href={socials.href}
-          aria-label={socials.label}
+          key={telegram.label}
+          href={telegram.href}
+          aria-label={telegram.label}
           mr={mr}
         >
           <Icon {...iconProps} />

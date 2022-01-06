@@ -23,7 +23,7 @@ const getCursorStyle = ({ disabled = false }: DisabledProp) => {
 
 const getBaseThumbStyles = ({ isMax, disabled }: StyledInputProps) => `
   -webkit-appearance: none;
-  background-image: url("/images/farmTruck.png");
+  background-image: url("/images/farmTruck.svg");
   background-color: transparent;
   border: 0;
   cursor: ${getCursorStyle};
@@ -55,7 +55,7 @@ export const SliderLabel = styled(Text)<SliderLabelProps>`
 `;
 
 export const BunnyButt = styled.div<DisabledProp>`
-  background: url("/images/brownHouse.png") no-repeat;
+  background: url("/images/brownHouse.svg") no-repeat;
   height: 32px;
   filter: ${({ disabled }) => (disabled ? "grayscale(100%)" : "none")};
   position: absolute;

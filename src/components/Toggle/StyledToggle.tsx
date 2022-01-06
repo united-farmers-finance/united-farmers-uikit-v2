@@ -62,19 +62,12 @@ export const Input = styled.input<InputProps>`
     left: ${getScale("checkedLeft")};
   }
 
-  /* &:focus + ${Handle} {
-    box-shadow: ${({ theme }) => theme.shadows.focus2};
-  }
-
-  &:hover + ${Handle}:not(:disabled):not(:checked) {
-    box-shadow: ${({ theme }) => theme.shadows.focus2};
-  } */
   &:focus + ${Handle} {
-    box-shadow: 0px 0px 0px 1px #aa8929, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+    box-shadow: ${({ theme }) => theme.shadows.focus};
   }
 
   &:hover + ${Handle}:not(:disabled):not(:checked) {
-    box-shadow: 0px 0px 0px 1px #aa8929, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+    box-shadow: ${({ theme }) => theme.shadows.focus};
   }
 `;
 

@@ -44,13 +44,19 @@ const BodyWrapper = styled.div`
   display: flex;
 `;
 
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+const Inner = styled.div<{
+  isPushed: boolean;
+  showMenu: boolean;
+  isDark: boolean;
+}>`
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
-  background-image: url("/images/Back1.jpg");
+  /* background-image: url("/images/Back1.jpg"); */
+  background-image: url(${(props) =>
+    props.isDark ? "/images/Back2.jpg" : "/images/Back1.jpg"});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -183,7 +189,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
         />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
+        <Inner isPushed={isPushed} showMenu={showMenu} isDark={isDark}>
           {children}
         </Inner>
         <MobileOnlyOverlay

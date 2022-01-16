@@ -24,6 +24,7 @@ const StyledPanel = styled.div<{
   justify-content: space-between;
   flex-shrink: 0;
   /* background-color: ${({ theme }) => theme.nav.background}; */
+  //dark mode changes
   background-color: ${({ isDark }) => (isDark ? "#4b4b4c" : "#e3e4fb")};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100%;

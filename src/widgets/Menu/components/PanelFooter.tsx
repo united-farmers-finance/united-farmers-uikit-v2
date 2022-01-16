@@ -15,11 +15,11 @@ interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
 }
 
-const Container = styled.div`
+const Container = styled.div<{ isDark: boolean }>`
   flex: none;
   padding: 8px 4px;
   /* background-color: ${({ theme }) => theme.nav.background}; */
-  background-color: #e3e4fb;
+  background-color: ${({ isDark }) => (isDark ? "#4b4b4c" : "#e3e4fb")};
 
   border-top: solid 2px rgba(133, 133, 133, 0.1);
 `;
@@ -83,7 +83,7 @@ const PanelFooter: React.FC<Props> = ({
   const handleClick = isMobile ? () => pushNav(false) : undefined;
   if (!isPushed) {
     return (
-      <Container>
+      <Container isDark={isDark}>
         <IconButton variant="text" onClick={() => pushNav(true)}>
           <CogIcon />
         </IconButton>
@@ -92,7 +92,7 @@ const PanelFooter: React.FC<Props> = ({
   }
 
   return (
-    <Container>
+    <Container isDark={isDark}>
       <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
         <SocialLinks />

@@ -4219,13 +4219,16 @@ var MenuLink = function (_a) {
 };
 
 var Icons$2 = IconModule;
-var Container$1 = styled__default["default"].div(templateObject_1$e || (templateObject_1$e = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: #e3e4fb;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: #e3e4fb;\n"])));
+var Container$1 = styled__default["default"].div(templateObject_1$e || (templateObject_1$e = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: ", ";\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: ", ";\n"])), function (_a) {
+    var isDark = _a.isDark;
+    return (isDark ? "#4b4b4c" : "#e3e4fb");
+});
 var PanelBody = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links, isDark = _a.isDark;
     var location = reactRouterDom.useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    return (React__default["default"].createElement(Container$1, null, links.map(function (entry) {
+    return (React__default["default"].createElement(Container$1, { isDark: isDark }, links.map(function (entry) {
         var Icon = Icons$2[entry.icon];
         var iconElement = React__default["default"].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass
@@ -4304,9 +4307,12 @@ var GrainPrice = function (_a) {
 var GrainPrice$1 = React__default["default"].memo(GrainPrice);
 var templateObject_1$c;
 
-var Container = styled__default["default"].div(templateObject_1$b || (templateObject_1$b = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  /* background-color: ", "; */\n  background-color: #e3e4fb;\n\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  /* background-color: ", "; */\n  background-color: #e3e4fb;\n\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
+var Container = styled__default["default"].div(templateObject_1$b || (templateObject_1$b = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  /* background-color: ", "; */\n  background-color: ", ";\n\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  /* background-color: ", "; */\n  background-color: ", ";\n\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
+}, function (_a) {
+    var isDark = _a.isDark;
+    return (isDark ? "#4b4b4c" : "#e3e4fb");
 });
 var SettingsEntry = styled__default["default"].div(templateObject_2$5 || (templateObject_2$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled__default["default"].div(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
@@ -4314,13 +4320,13 @@ var EmptyBox = styled__default["default"].div(templateObject_4$1 || (templateObj
 styled__default["default"].div(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  width: 100px;\n  height: 10px;\n"], ["\n  width: 100px;\n  height: 10px;\n"])));
 styled__default["default"].button(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"], ["\n  width: 140px;\n  height: 35px;\n  border: none;\n  border-radius: 18px;\n  cursor: pointer;\n  color: white;\n  font-size: 16px;\n  font-weight: 400;\n  background-color: #aa8929;\n  margin-left: 16px;\n  &:hover {\n    transition: 0.3s;\n    background-color: #baa461;\n  }\n"])));
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd; _a.currentLang; _a.langs; _a.setLang; _a.isMobile;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; var isDark = _a.isDark, cakePriceUsd = _a.cakePriceUsd, grainPriceUsd = _a.grainPriceUsd; _a.currentLang; _a.langs; _a.setLang; _a.isMobile;
     if (!isPushed) {
-        return (React__default["default"].createElement(Container, null,
+        return (React__default["default"].createElement(Container, { isDark: isDark },
             React__default["default"].createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
                 React__default["default"].createElement(Icon$1x, null))));
     }
-    return (React__default["default"].createElement(Container, null,
+    return (React__default["default"].createElement(Container, { isDark: isDark },
         React__default["default"].createElement(SocialEntry, null,
             React__default["default"].createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }),
             React__default["default"].createElement(SocialLinks$1, null)),
@@ -4331,7 +4337,7 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$b, templateObject_2$5, templateObject_3$2, templateObject_4$1, templateObject_5$1, templateObject_6$1;
 
-var StyledPanel = styled__default["default"].div(templateObject_1$a || (templateObject_1$a = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  /* background-color: ", "; */\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  /* background-color: ", "; */\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ",
+var StyledPanel = styled__default["default"].div(templateObject_1$a || (templateObject_1$a = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  /* background-color: ", "; */\n  //dark mode changes\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  /* background-color: ", "; */\n  //dark mode changes\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ",
     ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ",
     ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;

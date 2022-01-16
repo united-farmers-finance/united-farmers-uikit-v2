@@ -26,4 +26,9 @@ const ThemeSwitcher: React.FC<Props> = ({ isDark, toggleTheme }) => (
   </Button>
 );
 
-export default React.memo(ThemeSwitcher, (prev, next) => prev.isDark === next.isDark);
+const ThemeSwitcher2 = React.memo(
+  ThemeSwitcher,
+  (prev, next) => prev.isDark === next.isDark
+);
+
+export default ThemeSwitcher2;

@@ -4461,6 +4461,7 @@ var Menu$1 = function (_a) {
     }, []);
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
+    console.log("isDark????", isDark);
     return (React__default["default"].createElement(Wrapper, null,
         React__default["default"].createElement(StyledNav, { showMenu: showMenu },
             React__default["default"].createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),

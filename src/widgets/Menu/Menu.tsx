@@ -157,7 +157,7 @@ const Menu: React.FC<NavProps> = ({
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
-
+  console.log("isDark????", isDark);
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu}>

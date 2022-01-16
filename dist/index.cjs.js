@@ -4400,15 +4400,12 @@ var StyledNav = styled__default["default"].nav(templateObject_2$4 || (templateOb
     return theme.nav.background;
 });
 var BodyWrapper = styled__default["default"].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled__default["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  /* background-image: url(\"/images/Back1.jpg\"); */\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  /* background-image: url(\"/images/Back1.jpg\"); */\n  background-image: url(",
-    ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n\n  ", " {\n    margin-left: ",
+var Inner = styled__default["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  /* background-image: url(\"/images/Back1.jpg\"); */\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  /* background-image: url(\"/images/Back1.jpg\"); */\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n\n  ", " {\n    margin-left: ",
     ";\n    max-width: ",
     ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
-}, function (props) {
-    return props.isDark ? "/images/Back2.jpg" : "/images/Back1.jpg";
-}, function (_a) {
+}, function (props) { return props.src; }, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
@@ -4476,7 +4473,7 @@ var Menu$1 = function (_a) {
                 userMenu)),
         React__default["default"].createElement(BodyWrapper, null,
             React__default["default"].createElement(Panel, { isPushed: isPushed, isMobile: isSmallerScreen, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, grainPriceUsd: grainPriceUsd, pushNav: setIsPushed, links: links }),
-            React__default["default"].createElement(Inner, { isPushed: isPushed, showMenu: showMenu, isDark: isDark }, children),
+            React__default["default"].createElement(Inner, { isPushed: isPushed, showMenu: showMenu, src: isDark ? "/images/DarkBack.jpg" : "/images/LightBack.jpg" }, children),
             React__default["default"].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
 var templateObject_1$9, templateObject_2$4, templateObject_3$1, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;

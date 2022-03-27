@@ -98,7 +98,7 @@ const PanelFooter: React.FC<Props> = ({
         <SocialLinks />
       </SocialEntry>
       <SocialEntry>
-        <GrainPrice grainPriceUsd={grainPriceUsd} />
+        {/* <GrainPrice grainPriceUsd={grainPriceUsd} /> */}
         <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
       </SocialEntry>
       {/* <MarginBox />

@@ -4111,7 +4111,7 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/united_farmers_x",
+        href: "https://t.me/official_united_farmers_xv2",
     },
     {
         label: "Twitter",
@@ -4128,7 +4128,7 @@ var telegram = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/united_farmers_x",
+        href: "https://t.me/official_united_farmers_xv2",
     },
 ];
 var MENU_HEIGHT = 64;
